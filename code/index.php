@@ -1,5 +1,5 @@
 <?php
-$link = mysql_connect('172.17.0.4', 'root', 'password');
+$link = mysql_connect('db', 'root', 'password');
 if (!$link) {
     die('Could not connect: ' . mysql_error());
 }
