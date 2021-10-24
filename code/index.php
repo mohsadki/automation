@@ -1,10 +1,12 @@
-<H1>Hello msed !</H1>
 <?php
+$link = mysql_connect('172.17.0.4', 'root', 'password');
+if (!$link) {
+    die('Could not connect: ' . mysql_error());
+}
+echo 'Connected successfully';
+mysql_close($link);
 
-// Show all information, defaults to INFO_ALL
-phpinfo();
+$query = sprintf("INSERT INTO `log` (`id`, `ts`, `mess`) VALUES (NULL, CURRENT_TIMESTAMP, 'first message test')");
 
-// Show just the module information.
-// phpinfo(8) yields identical results.
-phpinfo(INFO_MODULES);
+mail('caffeinated@example.com', 'Mon Sujet', 'first message test');
 ?>
