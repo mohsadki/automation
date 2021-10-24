@@ -35,8 +35,3 @@ phpmyadmin:
     - PMA_USER=root
     - PMA_PASSWORD=password
     - PHP_UPLOAD_MAX_FILESIZE=100MB
-
-maildev:
-  image: djfarrelly/maildev
-  ports:
-   - "8084:80"
