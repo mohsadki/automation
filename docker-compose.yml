@@ -39,4 +39,4 @@ phpmyadmin:
 maildev:
   image: djfarrelly/maildev
   ports:
-   - "8081:80"
+   - "8084:80"
