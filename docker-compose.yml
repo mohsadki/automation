@@ -16,7 +16,6 @@ php:
     XDEBUG_CONFIG: remote_host=host.docker.internal
   links:
     - mysql
-    - maildev
 
 mysql:
   image: mysql:latest
